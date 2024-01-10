@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<cabinet>
+    <nom>
+        Soins à Grenoble
+    </nom>
+    
+    <adresse>
+        <numéro>60</numéro>
+        <rue>rue de la Chimie</rue>
+        <codePostal>38041</codePostal>
+        <ville>Grenoble</ville>
+    </adresse>
+    
+    <infirmiers>
+        <infirmier  id = "001">
+            <nom>Fréchie</nom>
+            <prénom>Sarah</prénom>
+            <photo>sarah.png</photo>
+        </infirmier>
+        
+        <infirmier  id = "002">
+            <nom>Stické</nom>
+            <prénom>Sophie</prénom>
+            <photo>sophie.jpg</photo>
+        </infirmier>
+        
+        <infirmier  id = "003">
+            <nom>Ochon</nom>
+            <prénom>Paul</prénom>
+            <photo>paul.png</photo>
+        </infirmier>
+    </infirmiers>
+    
+    <patients>
+        <patient>
+            <!--  Homme, né en oaût 98 en France,à Marseille (n° 55 en bouches du rhône)458e naissance-->
+            <nom>Alécole</nom>
+            <prenom>Yvon</prenom>
+            <sexe>M</sexe>
+            <naissance>1998-08-22</naissance>
+            <numéro>198082205545852</numéro>
+            <adresse>
+                <étage>6</étage>
+                <numéro>50</numéro>
+                <rue>avenue Félix Viallet</rue>
+                <ville>Grenoble</ville>
+                <codePostal>38031</codePostal>
+            </adresse>
+            <visite  date = "2015-12-08"  intervenant = "001">
+                <acte  id = "109"></acte>
+            </visite>
+        </patient>
+        <patient>
+            <nom>Orouge</nom>
+            <prenom>Elvire</prenom>
+            <sexe>F</sexe>
+            <naissance>1982-03-08</naissance>
+            <numéro>2820308023052</numéro>
+            <adresse>
+                <étage></étage>
+                <numéro></numéro>
+                <rue>Rond-Point de la Croix de Vie</rue>
+                <ville>La Tronche</ville>
+                <codePostal>38700</codePostal>
+            </adresse>
+            <visite  date = "2015-12-08"  intervenant = "">
+                <acte  id = ""></acte>
+            </visite>
+        </patient>
+        <patient>
+            <nom>Pien</nom>
+            <prenom>Oscare</prenom>
+            <sexe>F</sexe>
+            <naissance>1975-03-25</naissance>
+            <numéro></numéro>
+            <adresse>
+                <étage></étage>
+                <numéro></numéro>
+                <rue>Casimir Brenier</rue>
+                <ville>Grenoble</ville>
+                <codePostal>38000</codePostal>
+            </adresse>
+            <visite  date = "2015-12-08"  intervenant = "">
+                <acte  id = ""></acte>
+            </visite>
+        </patient>
+         <patient>
+            <nom>Kapoëtla</nom>
+            <prenom>Xavier</prenom>
+            <sexe>M</sexe>
+            <naissance>2011-08-02</naissance>
+            <numéro></numéro>
+            <adresse>
+                <étage></étage>
+                <numéro>25</numéro>
+                <rue>des Martyrs</rue>
+                <ville>Grenoble</ville>
+                <codePostal>38042</codePostal>
+            </adresse>
+            <visite  date = "2015-12-08"  intervenant = "">
+                <acte  id = ""></acte>
+            </visite>
+        </patient>
+        
+    </patients>
+    
+</cabinet>
+

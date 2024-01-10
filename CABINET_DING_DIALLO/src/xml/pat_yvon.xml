@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><patient xmlns:act="http://www.ujf-grenoble.fr/l3miage/actes" xmlns:cab="http://www.ujf-grenoble.fr/l3miage/medical"><nom>Alécole</nom><prenom>Yvon</prenom><sexe>M</sexe><naissance>1998-08-22</naissance><numéro>198082205545852</numéro><adresse>650<rue>avenue Félix Viallet</rue><ville>Grenoble</ville><codePostal>38031</codePostal></adresse><visite date="2015-12-08"><intervenant><nom>Fréchie</nom><prénom>Sarah</prénom></intervenant><acte> 
+            Prélèvement par ponction veineuse directe
+        </acte></visite></patient>

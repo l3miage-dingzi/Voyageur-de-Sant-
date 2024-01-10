@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<cab:cabinet
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:cab='http://www.ujf-grenoble.fr/l3miage/medical'
+    xmlns:pat='http://www.ujf-grenoble.fr/l3miage/medical'
+    xsi:schemaLocation='http://www.ujf-grenoble.fr/l3miage/medical cabinet.xsd
+   http://www.ujf-grenoble.fr/l3miage/medical patient.xsd'>
+    <cab:nom>Soins à Grenoble</cab:nom>
+    <cab:adresse>
+        <cab:étage>60</cab:étage>
+        <cab:numéro>60</cab:numéro>
+        <cab:rue>rue de la Chimie</cab:rue>
+        <cab:ville>Grenoble</cab:ville>
+        <cab:codePostal>38041</cab:codePostal>
+    </cab:adresse>
+    <cab:infirmiers>
+        <cab:infirmier id="001">
+            <cab:nom>Fréchie</cab:nom>
+            <cab:prénom>Sarah</cab:prénom>
+            <cab:photo>sophie.jpg</cab:photo>
+        </cab:infirmier>
+    </cab:infirmiers>
+    <cab:patients>
+        <cab:patient>
+            <cab:nom>Alécole</cab:nom>
+            <cab:prenom>Yvon</cab:prenom>
+            <cab:sexe>M</cab:sexe>
+            <cab:naissance>1998-08-22</cab:naissance>
+            <cab:numéro>198082205545852</cab:numéro>
+            <cab:adresse>
+                <cab:étage>6</cab:étage>
+                <cab:numéro>50</cab:numéro>
+                <cab:rue>avenue Félix Viallet</cab:rue>
+                <cab:ville>Grenoble</cab:ville>
+                <cab:codePostal>38031</cab:codePostal>
+            </cab:adresse>
+            <cab:visite date="2015-12-08" intervenant="001">
+                <cab:acte id="001"></cab:acte>
+            </cab:visite>
+        </cab:patient>
+    </cab:patients>
+
+</cab:cabinet>
+

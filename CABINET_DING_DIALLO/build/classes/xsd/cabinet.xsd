@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.ujf-grenoble.fr/l3miage/medical"
+           xmlns:cab="http://www.ujf-grenoble.fr/l3miage/medical"
+           elementFormDefault="qualified">
+
+    <xs:element name="cabinet" type="cab:Cabinet">
+        <xs:unique name="infunique">
+            <xs:selector xpath="cab:infirmiers/cab:infirmier"/>
+            <xs:field xpath="@id"/>
+        </xs:unique>
+
+    </xs:element>
+<xs:complexType name="Cabinet">
+    <xs:sequence>
+        <xs:element name="nom" type="xs:string"/>
+        <xs:element name="adresse" type="cab:Adresse"/>
+        <xs:element name="infirmiers" type="cab:Infirmiers"/>
+        <xs:element name="patients" type="cab:Patients"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="Adresse">
+    <xs:sequence>
+        <xs:element name="numéro" type="cab:Numéro"/>
+        <xs:element name="rue" type="xs:string"/>
+        <xs:element name="codePostal" type="cab:Codep"/> 
+        <xs:element name="ville" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="Patients">
+    <xs:sequence>
+       <xs:element name="patient" type="cab:Patient" maxOccurs="unbounded"/> 
+    </xs:sequence>
+    
+</xs:complexType>
+<xs:complexType name="Infirmiers">
+    <xs:sequence>
+        <xs:element name="infirmier" type="cab:Infirmier"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="Infirmier">
+    <xs:sequence>
+        <xs:element name="nom" type="xs:string"/>
+        <xs:element name="prénom" type="xs:string"/>
+        <xs:element name="photo" type="xs:string"/> 
+    </xs:sequence>
+    <xs:attribute name="id" type="cab:Idinf"/>
+</xs:complexType>
+<xs:complexType name="Patient">
+    <xs:sequence>
+        <xs:element name="nom" type="xs:string"/>
+        <xs:element name="prenom" type="xs:string"/>
+        <xs:element name="sexe" type="cab:Sexe"/>
+        <xs:element name="naissance" type="xs:date"/>
+        <xs:element name="numéro" type="cab:Numsec"/>
+        <xs:element name="adresse" type="cab:Adressep"/>
+        <xs:element name="visite" type="cab:Visite"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="Adressep">
+    <xs:sequence>
+        <xs:element name="étage" type="xs:string" minOccurs="0"/>
+        <xs:element name="numéro" type="cab:Numéro"/>
+        <xs:element name="rue" type="xs:string"/>
+        <xs:element name="ville" type="xs:string"/>
+        <xs:element name="codePostal" type="cab:Codep"/>   
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="Visite">
+    <xs:sequence>
+        <xs:element name="acte" type="cab:Acte" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="date" type="xs:date"/>
+    <xs:attribute name="intervenant" type="cab:Idinf"/>
+</xs:complexType>
+<xs:complexType name="Acte">
+    <xs:attribute name="id" type="xs:int"/>
+</xs:complexType>
+<xs:simpleType name="Numéro">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\d{1,4}" />
+    </xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="Codep">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\d{5}" />
+    </xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="Idinf">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\d{3}" />
+    </xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="Sexe">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="M"/>
+        <xs:enumeration value="F" />
+    </xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="Numsec">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\d{14}" />
+    </xs:restriction>
+</xs:simpleType>
+</xs:schema>
